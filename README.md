@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL to see Live preview**: https://findbooks.pranaycode.online/
+**URL to see Live preview**: https://xgfnr2-8081.csb.app/
 
 ## How can I edit this code?
 
