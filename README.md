@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to your Book Finder project
 
 ## Project info
 
@@ -7,8 +7,6 @@
 ## How can I edit this code?
 
 There are several ways of editing your application.
-
-**Use Lovable**
 
 Simply clone the repo and start building .
 
@@ -64,4 +62,12 @@ This project is built with:
 
 With free platform well know Netilfy .(Easy to use and handle).
 
+
+## Contact
+
+Feel free to reach out for opportunities or collaborations!
+
+- Email: [pranaykude990@gmail.com]
+- LinkedIn: [www.linkedin.com/in/pranay-kude-5ba242265]
+- GitHub: [https://github.com/pranaykude]
 
