@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Book Finder Design System - Modern Literary Aesthetic */
+
+@layer base {
+  :root {
+    /* Brand Colors - Book Finder Palette */
+    --background: 220 20% 98%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Primary: Calm Blue #4A90E2 */
+    --primary: 212 75% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 212 85% 70%;
+
+    /* Secondary: Warm Amber #F5A623 */
+    --secondary: 37 87% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 37 95% 65%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 220 20% 94%;
+    --accent-foreground: 220 20% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 96%;
+    --ring: 212 75% 58%;
+
+    --radius: 0.75rem;
+
+    /* Book Finder Specific Tokens */
+    --book-spine: 25 30% 85%;
+    --book-cover: 0 0% 100%;
+    --quote-bg: 220 25% 97%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
+    --gradient-book: linear-gradient(145deg, hsl(var(--book-cover)), hsl(var(--book-spine)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-book: 0 8px 30px -5px hsl(var(--foreground) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    
+    /* Typography */
+    --font-heading: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Book Finder */
+    --background: 220 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    /* Keep primary blue but adjust for dark mode */
+    --primary: 212 85% 70%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 212 90% 80%;
+
+    /* Warm amber adjusted for dark */
+    --secondary: 37 95% 65%;
+    --secondary-foreground: 220 25% 8%;
+    --secondary-glow: 37 100% 75%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 220 15% 16%;
+    --accent-foreground: 220 15% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 16%;
+    --ring: 212 85% 70%;
+
+    /* Book Finder Dark Specific */
+    --book-spine: 25 25% 25%;
+    --book-cover: 220 15% 15%;
+    --quote-bg: 220 15% 14%;
+    
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
+    --gradient-book: linear-gradient(145deg, hsl(var(--book-cover)), hsl(var(--book-spine)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Dark Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-book: 0 8px 30px -5px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-[var(--font-body)];
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Book Card Animations */
+  .book-card {
+    @apply transition-all duration-300 ease-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .book-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-book);
+  }
+  
+  /* Search Bar Glow Effect */
+  .search-glow:focus-within {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  
+  /* Hero Gradient */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Button Variants */
+  .btn-hero {
+    background: var(--gradient-primary);
+    @apply text-primary-foreground font-semibold px-8 py-4 rounded-xl;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .btn-secondary {
+    background: var(--gradient-secondary);
+    @apply text-secondary-foreground font-semibold px-6 py-3 rounded-lg;
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+  }
+  
+  /* Quote Section */
+  .quote-section {
+    background: hsl(var(--quote-bg));
+    @apply p-6 rounded-2xl;
+    border: 1px solid hsl(var(--border));
+  }
+  
+  /* Fade In Animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  /* Stagger Animation for Book Grid */
+  .stagger-fade:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-fade:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-fade:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-fade:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-fade:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-fade:nth-child(6) { animation-delay: 0.6s; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
